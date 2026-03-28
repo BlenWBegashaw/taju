@@ -18,12 +18,7 @@
        class="w-12 md:w-16 bg-transparent mix-blend-screen"
        alt="BLU Logo"/>
 
-  <!-- MOBILE MENU ICON -->
-  <button class="md:hidden text-white text-2xl">
-    ☰
-  </button>
-
-  <!-- DESKTOP LINKS -->
+  <!-- LINKS -->
   <ul class="hidden md:flex space-x-10 text-lg font-medium">
     <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
     <li><a href="equipment.html" class="hover:text-yellow-400">Equipment</a></li>
@@ -32,11 +27,11 @@
 
 </nav>
 
-<!-- ===================== HERO ===================== -->
+<!-- ===================== TITLE ===================== -->
 <section class="text-center py-10 px-4">
-  <h1 class="text-2xl md:text-4xl font-bold">Get In Touch</h1>
+  <h1 class="text-2xl md:text-4xl font-bold">Contact Us</h1>
   <p class="text-gray-400 mt-2 text-sm md:text-base">
-    We reply as fast as possible. Send us a message below.
+    Send us a message and we’ll reply to your email.
   </p>
 </section>
 
@@ -45,9 +40,8 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-    <!-- LEFT INFO -->
-    <div class="space-y-8">
-
+    <!-- INFO -->
+    <div class="space-y-6">
       <div>
         <h2 class="text-lg font-semibold">Phone</h2>
         <p class="text-gray-400">+251 900 000 000</p>
@@ -62,31 +56,37 @@
         <h2 class="text-lg font-semibold">Location</h2>
         <p class="text-gray-400">Addis Ababa, Ethiopia</p>
       </div>
-
-      <div class="text-gray-500 text-sm">
-        Working hours: Mon - Sat, 8:00 AM - 6:00 PM
-      </div>
-
     </div>
 
-    <!-- RIGHT FORM -->
-    <form class="space-y-4 bg-gray-900 p-6 rounded-lg border border-gray-800">
+    <!-- FORM (EMAIL SENDING HERE) -->
+    <form action="https://formspree.io/f/xojpjgrg" method="POST"
+          class="space-y-4 bg-gray-900 p-6 rounded-lg border border-gray-800">
 
       <input type="text"
+             name="name"
              placeholder="Your Name"
+             required
              class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 text-white"/>
 
       <input type="email"
+             name="email"
              placeholder="Your Email"
+             required
              class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 text-white"/>
 
       <input type="text"
+             name="subject"
              placeholder="Subject"
              class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 text-white"/>
 
       <textarea rows="5"
+                name="message"
                 placeholder="Your Message"
+                required
                 class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 text-white"></textarea>
+
+      <!-- OPTIONAL -->
+      <input type="hidden" name="_subject" value="New message from BLU website">
 
       <button type="submit"
               class="w-full bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition">
@@ -98,7 +98,7 @@
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- FOOTER -->
 <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
   © 2026 BLU. All rights reserved.
 </footer>
