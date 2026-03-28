@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TAJU BUSINESS PLC</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Smooth scroll -->
   <style>
     html {
       scroll-behavior: smooth;
@@ -19,76 +17,69 @@
 <body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
 
 <!-- ===================== NAVBAR ===================== -->
-<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 flex items-center justify-between px-8 py-4 border-b border-gray-700">
+<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 flex items-center justify-between px-4 md:px-8 py-3 md:py-4 border-b border-gray-700">
 
-  <!-- LOGO (smaller, far left) -->
+  <!-- LOGO -->
   <img src="images/logo.png"
-       class="w-12 md:w-14 bg-transparent mix-blend-screen"
-       alt="BLU Logo"/>
+       class="w-10 md:w-14 mix-blend-screen"
+       alt="TAJU Logo"/>
 
   <!-- LINKS -->
-  <ul class="hidden md:flex space-x-14 text-lg font-medium">
-    <li>
-      <a href="index.html" class="hover:text-yellow-400">Home</a>
-    </li>
-    <li>
-      <a href="equipment.html" class="hover:text-yellow-400">Equipment</a>
-    </li>
-    <li>
-      <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-    </li>
+  <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm md:text-base font-medium">
+    <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+    <li><a href="equipment.html" class="hover:text-yellow-400">Equipment</a></li>
+    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
   </ul>
 
 </nav>
 
-<!-- ===================== HERO SECTION ===================== -->
-<section class="px-8 mt-16 flex flex-col xl:flex-row items-center gap-10">
+<!-- ===================== HERO ===================== -->
+<section class="px-4 md:px-8 mt-10 md:mt-16 flex flex-col xl:flex-row items-center gap-10">
 
   <!-- TEXT -->
-  <div class="xl:w-1/2">
-    <h1 class="text-5xl xl:text-6xl font-semibold leading-tight">
+  <div class="w-full xl:w-1/2 text-center xl:text-left">
+
+    <h1 class="text-3xl md:text-5xl xl:text-6xl font-semibold leading-tight">
       Heavy Construction Machinery and Equipment <br/>
       <span class="text-yellow-400 font-light">Rental in Ethiopia</span>
     </h1>
 
-    <p class="mt-5 text-gray-300">
-      TAJU provides reliable heavy construction machinery and equipments for rent.
+    <p class="mt-4 md:mt-5 text-gray-300 text-sm md:text-base">
+      TAJU provides reliable heavy construction machinery and equipment for rent.
       Fast response. Trusted service. Built for construction projects that move fast.
     </p>
-<!-- BUTTONS -->
-    <div class="mt-8 flex flex-wrap gap-4">
+
+    <!-- BUTTONS -->
+    <div class="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 justify-center xl:justify-start">
 
       <a href="https://wa.me/251000000000"
-         class="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition">
-        Rent via WhatsApp
-        Rent via phone
+         class="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition text-center">
+        Rent via WhatsApp / Phone
       </a>
 
-      <a href="#featured" class="border border-gray-500 px-6 py-3 rounded-full hover:border-yellow-400 hover:text-yellow-400">
-        View Equipment
-        View Machinery
+      <a href="#featured"
+         class="border border-gray-500 px-6 py-3 rounded-full hover:border-yellow-400 hover:text-yellow-400 text-center">
+        View Equipment / Machinery
       </a>
-    
 
-  <!-- IMAGE GRID (your pics) -->
-  <!-- IMAGE GRID (your pics) -->
-  <div class="xl:w-1/2 grid grid-cols-2 gap-4 pl-2">
+    </div>
+  </div>
 
-  <img src="images/pic1.JPG"
-       class="rounded-xl w-full h-auto object-contain bg-gray-800 hover:scale-105 transition
-              col-span-2 justify-self-start"/>
-
+  <!-- IMAGE -->
+  <div class="w-full xl:w-1/2 flex justify-center">
+    <img src="images/pic1.JPG"
+         class="w-full max-w-md md:max-w-lg xl:max-w-full rounded-xl object-contain bg-gray-800 hover:scale-105 transition"
+         alt="Equipment"/>
   </div>
 
 </section>
 
-
 <!-- ===================== ABOUT ===================== -->
-<section id="about" class="mt-24 px-8 text-center max-w-3xl mx-auto">
+<section id="about" class="mt-20 md:mt-24 px-4 md:px-8 text-center max-w-3xl mx-auto">
 
-  <h2 class="text-3xl font-semibold text-yellow-400">Why TAJU?</h2>
+  <h2 class="text-2xl md:text-3xl font-semibold text-yellow-400">Why TAJU?</h2>
 
-  <p class="mt-4 text-gray-300">
+  <p class="mt-4 text-gray-300 text-sm md:text-base">
     We make construction faster by providing dependable heavy machinery
     without the stress of ownership. Simple booking, fast response, and
     reliable equipment availability.
@@ -96,24 +87,19 @@
 
 </section>
 
-
-
-
 <!-- ===================== CONTACT CTA ===================== -->
-<section id="contact" class="mt-24 px-8 text-center">
+<section id="contact" class="mt-20 md:mt-24 px-4 md:px-8 text-center">
 
-  <h2 class="text-3xl font-semibold">Need Equipment Fast?</h2>
+  <h2 class="text-2xl md:text-3xl font-semibold">Need Equipment Fast?</h2>
 
-  <p class="text-gray-400 mt-3">
+  <p class="text-gray-400 mt-3 text-sm md:text-base">
     Contact us instantly on the phone and get a quote within minutes.
   </p>
 
-
 </section>
 
-
 <!-- ===================== FOOTER ===================== -->
-<footer class="mt-24 py-10 text-center text-gray-500 border-t border-gray-800">
+<footer class="mt-20 md:mt-24 py-8 text-center text-gray-500 border-t border-gray-800 text-sm">
   © 2026 TAJU Heavy Equipment Rental. All rights reserved.
 </footer>
 
