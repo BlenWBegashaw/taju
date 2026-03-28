@@ -147,10 +147,14 @@ const appear = new IntersectionObserver(entries => {
 faders.forEach(el => appear.observe(el));
 
 // booking
+<!-- SCRIPT -->
+<script>
 function bookMachine() {
   const selected = document.getElementById("machineSelect").value;
 
-  const message = "Interested in: " + selected;
+  const message =
+    "Hello TAJU,\n\nI am interested in renting: " + selected +
+    ". Please provide availability and pricing.\n\nThank you.";
 
   window.location.href =
     "contact.html?message=" + encodeURIComponent(message);
