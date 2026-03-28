@@ -11,7 +11,7 @@
 <body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white overflow-x-hidden">
 
 <!-- ================= NAVBAR ================= -->
-<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 flex items-center justify-between px-4 md:px-8 py-3 md:py-4 border-b border-gray-700">
+<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 flex items-center justify-between px-4 md:px-8 py-3 border-b border-gray-700">
 
   <img src="images/logo.png"
        class="w-10 md:w-14 mix-blend-screen"
@@ -27,7 +27,7 @@
 
 <!-- ================= HEADER ================= -->
 <section class="text-center py-8 md:py-12 px-4">
-  <h1 class="text-2xl md:text-4xl font-bold text-yellow-400">
+  <h1 class="text-3xl md:text-4xl font-bold text-yellow-400">
     Contact BLU
   </h1>
 
@@ -45,8 +45,8 @@
        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700 hover:border-yellow-400 transition">
 
       <h2 class="text-lg font-semibold text-yellow-400">Phone</h2>
-      <p class="text-gray-300 mt-2">+251 900 000 000</p>
-      <p class="text-sm text-gray-500 mt-1">Click to call</p>
+      <p class="text-gray-300 mt-2 text-sm md:text-base">+251 900 000 000</p>
+      <p class="text-xs md:text-sm text-gray-500 mt-1">Click to call</p>
 
     </a>
 
@@ -54,16 +54,16 @@
        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700 hover:border-yellow-400 transition">
 
       <h2 class="text-lg font-semibold text-yellow-400">Email</h2>
-      <p class="text-gray-300 mt-2">info@blu.com</p>
-      <p class="text-sm text-gray-500 mt-1">Click to email</p>
+      <p class="text-gray-300 mt-2 text-sm md:text-base">info@blu.com</p>
+      <p class="text-xs md:text-sm text-gray-500 mt-1">Click to email</p>
 
     </a>
 
     <div class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700">
 
       <h2 class="text-lg font-semibold text-yellow-400">Address</h2>
-      <p class="text-gray-300 mt-2">Addis Ababa, Ethiopia</p>
-      <p class="text-sm text-gray-500 mt-1">Main Office</p>
+      <p class="text-gray-300 mt-2 text-sm md:text-base">Addis Ababa, Ethiopia</p>
+      <p class="text-xs md:text-sm text-gray-500 mt-1">Main Office</p>
 
     </div>
 
@@ -77,29 +77,29 @@
   <form id="contactForm"
         action="https://formspree.io/f/xojpjgrg"
         method="POST"
-        class="bg-gray-800 p-4 md:p-8 rounded-xl space-y-4 border border-gray-700 shadow-lg">
+        class="bg-gray-800 p-5 md:p-8 rounded-xl space-y-4 border border-gray-700 shadow-lg">
 
     <input type="text"
            name="name"
            placeholder="Your Name"
            required
-           class="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white text-sm md:text-base">
+           class="w-full p-4 rounded bg-gray-900 border border-gray-700 text-white text-base">
 
     <input type="email"
            name="email"
            placeholder="Your Email"
            required
-           class="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white text-sm md:text-base">
+           class="w-full p-4 rounded bg-gray-900 border border-gray-700 text-white text-base">
 
     <textarea name="message"
               id="messageBox"
               rows="6"
               placeholder="Your Message"
               required
-              class="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white text-sm md:text-base"></textarea>
+              class="w-full p-4 rounded bg-gray-900 border border-gray-700 text-white text-base"></textarea>
 
     <button type="submit"
-            class="w-full bg-yellow-500 text-black py-3 rounded font-semibold hover:bg-yellow-400 transition active:scale-95">
+            class="w-full bg-yellow-500 text-black py-3 rounded font-semibold hover:bg-yellow-400 transition active:scale-95 text-base">
       Send Message
     </button>
 
@@ -158,4 +158,3 @@ form.addEventListener("submit", async function (e) {
 
 </body>
 </html>
-
