@@ -17,21 +17,48 @@
 <body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
 
 <!-- ===================== NAVBAR ===================== -->
-<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 flex items-center justify-between px-4 md:px-8 py-3 border-b border-gray-700">
+<!-- ===================== NAVBAR ===================== -->
+<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 border-b border-gray-700">
 
-  <img src="images/logo.png"
-       class="w-10 md:w-14 mix-blend-screen"
-       alt="TAJU Logo"/>
+  <div class="flex items-center justify-between px-4 md:px-8 py-3">
 
-  <!-- MOBILE FRIENDLY NAV -->
-  <ul class=" md:flex space-x-6 lg:space-x-14 text-sm md:text-base lg:text-lg font-medium">
-    <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-    <li><a href="equipment.html" class="hover:text-yellow-400">Equipment</a></li>
-    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
-  </ul>
+    <!-- LOGO -->
+    <img src="images/logo.png"
+         class="w-10 md:w-14 mix-blend-screen"
+         alt="TAJU Logo"/>
+
+    <!-- DESKTOP LINKS -->
+    <ul class="hidden md:flex space-x-8 text-base font-medium">
+      <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+      <li><a href="equipment.html" class="hover:text-yellow-400">Equipment</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
+
+    <!-- HAMBURGER BUTTON (MOBILE ONLY) -->
+    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-4 px-6 pb-4 text-base bg-gray-900/90">
+
+    <a href="index.html" class="hover:text-yellow-400">Home</a>
+    <a href="equipment.html" class="hover:text-yellow-400">Equipment</a>
+    <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+
+  </div>
 
 </nav>
 
+<!-- SCRIPT -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
 <!-- ===================== HERO ===================== -->
 <section class="px-4 md:px-8 mt-10 md:mt-16 flex flex-col xl:flex-row items-start gap-10">
 
