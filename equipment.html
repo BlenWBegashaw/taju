@@ -150,6 +150,11 @@ faders.forEach(el => appear.observe(el));
 function bookMachine() {
   const selected = document.getElementById("machineSelect").value;
 
+  if (!selected) {
+    alert("Please select a machine");
+    return;
+  }
+
   const message =
     "Hello TAJU,\n\nI am interested in renting: " + selected +
     ". Please provide availability and pricing.\n\nThank you.";
@@ -158,6 +163,7 @@ function bookMachine() {
     "contact.html?message=" + encodeURIComponent(message);
 }
 </script>
+
 
 </body>
 </html>
