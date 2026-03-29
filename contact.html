@@ -6,37 +6,56 @@
   <title>Contact | TAJU</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-hidden {
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+    }
+    .menu-show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  </style>
 </head>
 
-<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white overflow-x-hidden">
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
 
 <!-- ================= NAVBAR ================= -->
-<nav class="sticky top-0 z-50 backdrop-blur bg-gray-900/70 flex items-center justify-between px-4 md:px-8 py-3 border-b border-gray-700">
+<nav class="fixed top-0 w-full z-50 backdrop-blur bg-gray-900/70 px-4 py-3 border-b border-gray-700 flex items-center justify-between">
 
-  <img src="images/logo.png"
-       class="w-10 md:w-14 mix-blend-screen"
-       alt="TAJU Logo"/>
+  <img src="images/logo.png" class="w-10 mix-blend-screen" />
 
-  <!-- DESKTOP MENU -->
-  <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm md:text-2xl">
+  <ul class="hidden md:flex space-x-10 text-lg">
     <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-    <li><a href="equipment.html" class="hover:text-yellow-400">Equipment</a></li>
+    <li><a href="equipment.html" class="text-yellow-400">Equipment</a></li>
     <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
   </ul>
 
-  <!-- HAMBURGER -->
   <button id="menuBtn" class="md:hidden text-2xl">☰</button>
 
-  <!-- MOBILE MENU -->
   <div id="mobileMenu"
-       class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[90%] max-w-md bg-black border-t-4 border-yellow-400 rounded-lg shadow-2xl hidden">
+       class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[90%] max-w-md bg-black border-t-4 border-yellow-400 rounded-lg shadow-2xl menu-hidden">
 
     <div class="flex flex-col text-xl py-6 px-6 space-y-6">
       <a href="index.html" onclick="toggleMenu()">Home</a>
-      <a href="equipment.html" onclick="toggleMenu()">Equipment</a>
-      <a href="contact.html" onclick="toggleMenu()" class="text-yellow-400">Contact</a>
+      <a href="equipment.html" onclick="toggleMenu()" class="text-yellow-400">Equipment</a>
+      <a href="contact.html" onclick="toggleMenu()">Contact</a>
     </div>
-
   </div>
 </nav>
 
