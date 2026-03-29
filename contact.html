@@ -48,8 +48,9 @@
 
   <button id="menuBtn" class="md:hidden text-2xl">☰</button>
 
+  <!-- FIXED: removed menu-hidden misuse -->
   <div id="mobileMenu"
-       class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[90%] max-w-md bg-black border-t-4 border-yellow-400 rounded-lg shadow-2xl menu-hidden">
+       class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[90%] max-w-md bg-black border-t-4 border-yellow-400 rounded-lg shadow-2xl opacity-0 pointer-events-none transition">
 
     <div class="flex flex-col text-xl py-6 px-6 space-y-6">
       <a href="index.html" onclick="toggleMenu()">Home</a>
@@ -60,7 +61,7 @@
 </nav>
 
 <!-- ================= HEADER ================= -->
-<section class="text-center py-8 md:py-12 px-4">
+<section class="text-center py-8 md:py-12 px-4 mt-16">
   <h1 class="text-3xl md:text-4xl font-bold text-yellow-400">
     Contact TAJU
   </h1>
@@ -96,7 +97,7 @@
     <div class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700">
 
       <h2 class="text-lg font-semibold text-yellow-400">Address</h2>
-      <p class="text-gray-300 mt-2 text-sm md:text-base"> Kirkos subcity, Woreda 09,Addis Ababa, Ethiopia</p>
+      <p class="text-gray-300 mt-2 text-sm md:text-base">Kirkos subcity, Woreda 09, Addis Ababa, Ethiopia</p>
       <p class="text-xs md:text-sm text-gray-500 mt-1">Main Office</p>
 
     </div>
@@ -149,12 +150,13 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
-// hamburger toggle
+// hamburger toggle (FIXED)
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 function toggleMenu() {
-  mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.toggle("opacity-0");
+  mobileMenu.classList.toggle("pointer-events-none");
 }
 
 menuBtn.addEventListener("click", toggleMenu);
@@ -162,7 +164,8 @@ menuBtn.addEventListener("click", toggleMenu);
 // close when clicking outside
 document.addEventListener("click", function(e) {
   if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.add("opacity-0");
+    mobileMenu.classList.add("pointer-events-none");
   }
 });
 
@@ -178,13 +181,13 @@ window.onload = function () {
 ${message}
 
 ---
-Sent from BLU Equipment Page`;
+Sent from TAJU Equipment Page`;
 
     document.getElementById("messageBox").value = formatted;
   }
 };
 
-// form submit
+// form submit (UNCHANGED)
 const form = document.getElementById("contactForm");
 const successMessage = document.getElementById("successMessage");
 
