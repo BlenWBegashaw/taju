@@ -5,7 +5,7 @@ This is the official website for TAJU Business PLC, a heavy equipment rental ser
 ## 🚜 About
 The website showcases available machinery for mining, quarry, and construction projects. Customers can view equipment and send booking or inquiry requests.
 
-## 🌍 Features
+## Features
 - Equipment listing page
 - Contact form (Formspree integration)
 - Mobile responsive design
