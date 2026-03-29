@@ -62,7 +62,9 @@
 <!-- ================= HEADER ================= -->
 <section class="pt-28 text-center px-6 fade-up">
   <h1 class="text-4xl font-bold text-yellow-400">Available Equipment</h1>
-  <p class="text-gray-300 mt-3">Reliable machinery for mining, quarry, and construction.</p>
+  <p class="text-gray-300 mt-3">
+    Reliable machinery for mining, quarry, and construction.
+  </p>
 </section>
 
 <!-- ================= CARD ================= -->
@@ -70,10 +72,12 @@
 
   <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400 transition grid md:grid-cols-2">
 
+    <!-- IMAGE -->
     <div class="bg-gray-900 p-6 flex items-center justify-center">
       <img src="images/pic5.png" class="w-full max-h-96 object-contain rounded-xl" />
     </div>
 
+    <!-- DETAILS -->
     <div class="p-8">
 
       <h2 class="text-2xl font-bold text-yellow-400">
@@ -91,15 +95,17 @@
         <p>🏗️ Use: Mining • Quarry • Excavation</p>
       </div>
 
+      <!-- FIXED SELECT -->
       <select id="machineSelect"
               class="w-full mt-6 p-3 rounded-lg bg-gray-900 border border-gray-700 text-white">
 
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
+        <option value="Hyundai HX340SL - Unit 1">Unit 1</option>
+        <option value="Hyundai HX340SL - Unit 2">Unit 2</option>
+        <option value="Hyundai HX340SL - Unit 3">Unit 3</option>
 
       </select>
 
+      <!-- BUTTON -->
       <button onclick="bookMachine()"
               class="mt-6 w-full bg-yellow-400 text-black py-3 rounded-xl font-bold hover:bg-yellow-300 transition">
 
@@ -120,6 +126,8 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
+
+// menu toggle
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -146,24 +154,26 @@ const appear = new IntersectionObserver(entries => {
 });
 faders.forEach(el => appear.observe(el));
 
-// booking
+// FIXED SEND MESSAGE LOGIC
 function bookMachine() {
   const selected = document.getElementById("machineSelect").value;
 
-  if (!selected) {
-    alert("Please select a machine");
-    return;
-  }
+  if (!selected) return;
 
   const message =
-    "Hello TAJU,\n\nI am interested in renting: " + selected +
-    ". Please provide availability and pricing.\n\nThank you.";
+`📩 Equipment Quote Request
+
+Machine: ${selected}
+
+Please provide availability and pricing.
+
+Thank you.`;
 
   window.location.href =
     "contact.html?message=" + encodeURIComponent(message);
 }
-</script>
 
+</script>
 
 </body>
 </html>
